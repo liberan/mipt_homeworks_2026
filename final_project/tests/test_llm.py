@@ -3,8 +3,8 @@ from unittest.mock import MagicMock
 import pytest
 from openai import OpenAIError
 
-from app.errors import LLMError
-from app.llm import LLMClient
+from app.core.errors import LLMError
+from app.services.llm import LLMClient
 
 
 def _make_response(content):

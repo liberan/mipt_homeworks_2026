@@ -1,7 +1,7 @@
 import pytest
 
-from app.config import load_config
-from app.errors import ConfigError
+from app.core.config import load_config
+from app.core.errors import ConfigError
 
 
 def test_no_config_at_all(tmp_path, monkeypatch):

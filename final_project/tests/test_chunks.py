@@ -1,6 +1,6 @@
 import pytest
 
-from app.chunks import (
+from app.services.chunks import (
     ChunkOptions,
     iter_chunks,
     parse_command,

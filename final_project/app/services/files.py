@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from app.errors import FileTooBigError
+from app.core.errors import FileTooBigError
 
 MAX_FILE_SIZE = 5 * 1024 * 1024  # 5 МБ
 

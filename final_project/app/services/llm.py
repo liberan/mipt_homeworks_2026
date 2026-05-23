@@ -2,7 +2,7 @@ from collections.abc import Iterator
 
 from openai import OpenAI, OpenAIError
 
-from app.errors import LLMError
+from app.core.errors import LLMError
 
 
 class LLMClient:

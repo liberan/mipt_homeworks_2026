@@ -1,7 +1,7 @@
 import pytest
 
-from app.errors import FileTooBigError
-from app.files import extract_file_paths, read_text_file, substitute_files
+from app.core.errors import FileTooBigError
+from app.services.files import extract_file_paths, read_text_file, substitute_files
 
 
 def test_extract_one_path():
@@ -59,7 +59,7 @@ def test_read_text_file_too_big(tmp_path, monkeypatch):
     p = tmp_path / 'big.txt'
     p.write_text('x' * 100, encoding='utf-8')
     # имитируем маленький лимит
-    monkeypatch.setattr('app.files.MAX_FILE_SIZE', 10)
+    monkeypatch.setattr('app.services.files.MAX_FILE_SIZE', 10)
     with pytest.raises(FileTooBigError):
         read_text_file(p)
 

@@ -4,7 +4,7 @@ from pathlib import Path
 
 import yaml
 
-from app.errors import ConfigError
+from app.core.errors import ConfigError
 
 
 @dataclass

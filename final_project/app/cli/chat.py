@@ -2,12 +2,12 @@ import os
 import sys
 from pathlib import Path
 
-from app.chunks import ChunkOptions, iter_chunks, parse_command
-from app.config import Config
-from app.errors import AppError, FileTooBigError, LLMError
-from app.files import read_text_file, substitute_files
-from app.history import History
-from app.llm import LLMClient
+from app.core.config import Config
+from app.core.errors import AppError, FileTooBigError, LLMError
+from app.services.chunks import ChunkOptions, iter_chunks, parse_command
+from app.services.files import read_text_file, substitute_files
+from app.services.history import History
+from app.services.llm import LLMClient
 
 PROMPT = '>>> '
 EXIT_COMMAND = '\\q'
@@ -154,8 +154,12 @@ def run_chat(config: Config) -> None:
 
 
 def main() -> int:
-    from app.config import load_config
-    from app.errors import ConfigError
+    from dotenv import load_dotenv
+
+    from app.core.config import load_config
+    from app.core.errors import ConfigError
+
+    load_dotenv()
     try:
         config = load_config()
     except ConfigError as e:

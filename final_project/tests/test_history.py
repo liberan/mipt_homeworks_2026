@@ -1,4 +1,4 @@
-from app.history import History
+from app.services.history import History
 
 
 def test_add_user_and_assistant():
