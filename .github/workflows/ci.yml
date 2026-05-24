@@ -17,7 +17,7 @@ on:
         default: false
         type: boolean
   push:
-    branches: [main, master, part4_oop]
+    branches: [main, master]
     paths-ignore:
       - 'final_project/**'
   pull_request:
