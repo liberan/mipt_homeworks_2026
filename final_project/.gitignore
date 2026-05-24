@@ -1,0 +1,15 @@
+__pycache__/
+*.py[codz]
+
+.venv/
+
+config.yaml
+.env
+
+.coverage
+.coverage.*
+coverage.xml
+.pytest_cache/
+.ruff_cache/
+
+!htmlcov/
