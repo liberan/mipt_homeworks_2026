@@ -17,7 +17,7 @@ on:
         default: false
         type: boolean
   push:
-    branches: [main, master, part5_decorators]
+    branches: [main, master]
     paths-ignore:
       - 'final_project/**'
   pull_request:
